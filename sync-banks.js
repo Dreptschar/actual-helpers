@@ -3,7 +3,7 @@
 const { closeBudget, openBudget } = require('./utils');
 const api = require('@actual-app/api');
 
-(async () => {
+const sync_bank = (async () => {
   await openBudget();
 
   console.log("syncing banks...");
@@ -11,3 +11,4 @@ const api = require('@actual-app/api');
 
   await closeBudget();
 })();
+
